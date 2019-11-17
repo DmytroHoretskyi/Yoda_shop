@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Bowlby+One+SC|Orbitron&display=swap');
+
+:root{
+scroll-behavior: smooth
+}
+
+body{
+    max-width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    background-color: black;
+
+}
+*{
+    -webkit-text-fill-color: white;
+}
+#start_page_header{ 
+    background-image: url(../img/yoda.jpg);
+    width: 1920px;
+    height: 900px;
+        text-align: center;
+        justify-content: space-around;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+header nav .menu {
+display: flex;
+ list-style-type: none;
+ justify-content: space-between;
+margin: 20px;
+
+
+        }
+header nav .menu a {
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    border: 1px solid transparent;
+    padding: 0;
+     transition: 0.4s ease-in-out;
+}
+header nav .menu a:hover{
+    box-shadow: inset 0 -60px 0 grey, 2px 2px 3px rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+header nav .menu a:hover{
+    border: 1px solid white;
+
+}
+input, textarea,button{
+    -webkit-text-fill-color: black;
+}
+
+#information_text{
+   font-size: 100px;
+   text-align: center;
+}
+#text{
+    text-align: center;
+    font-size: 150px;
+    text-shadow: 15px;
+
+}
+main #products{
+    font-family: 'Orbitron', sans-serif;
+    -webkit-text-fill-color: greenyellow;
+    font-size: 50px;
+    text-align: center;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+main article .product_name{
+    font-family: 'Bowlby One SC', cursive;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+main article .information_about_product{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    margin: 15px;
+}
+main article div .buy_button{
+ text-decoration: none;
+  outline: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  margin: 10px 20px;   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+main article div .buy_button:before{
+content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+
+main article div .buy_button:hover{
+background: rgba(255,255,255,0);
+}
+main article div .buy_button:hover:before{
+     bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+#back{
+    text-align: center;
+    font-size: 100px;
+
+
+}
+#catalog{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.message{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.product-list article img {
+    display: block;
+    width: 100%;
+}
+article{
+        border: 1px solid white;
+}
+.product-list article .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@media (min-width: 560px) {
+.product-list {
+    border-image-width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5px;
+        grid-gap: 10px;}}
+
+@media (min-width: 660px) {
+ .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+footer .get-ajax-html{
+    
+    text-align: center;
+    text-decoration: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 30px;
+    position: relative;
+  border: 2px solid #f1c40f;
+  color: #f1c40f;
+  font-family: 'Montserrat', sans-serif; 
+  transition: .4s;
+}
+footer .get-ajax-html:after{
+ content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 2px solid rgba(0,0,0,0);
+  transition: .4s;
+}
+footer .get-ajax-html:hover::after{
+    border-color: #f1c40f;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+}
+footer{
+    background-image: url(../img/jedy.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.get-ajax-html{
+    position: sticky;
+}
+.info_about_admin{
+    font-size: 35px;
+    font-family: 'Rubik One', sans-serif;
+
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #09e750 33%, #ad304d 66%, #b0d1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+  margin: 20px auto;
+}
