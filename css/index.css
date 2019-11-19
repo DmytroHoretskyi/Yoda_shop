@@ -16,7 +16,6 @@ body{
 }
 #start_page_header{ 
     background-image: url(../img/yoda.jpg);
-    width: 1920px;
     height: 900px;
         text-align: center;
         justify-content: space-around;
