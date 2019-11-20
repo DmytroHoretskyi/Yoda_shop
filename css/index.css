@@ -156,7 +156,7 @@ article{
     font-size: 20px;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 660px) {
 .product-list {
     border-image-width: auto;
         display: grid;
@@ -164,10 +164,15 @@ article{
         margin: 5px;
         grid-gap: 10px;}}
 
-@media (min-width: 660px) {
+@media (min-width: 920px) {
  .product-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+footer{
+    background-image: url(../img/jedy.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 footer .get-ajax-html{
     
@@ -201,11 +206,7 @@ footer .get-ajax-html:hover::after{
   width: calc(100% - 10px);
   height: calc(100% + 10px);
 }
-footer{
-    background-image: url(../img/jedy.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+
 .get-ajax-html{
     position: sticky;
 }
@@ -221,3 +222,4 @@ footer{
   display: table;
   margin: 20px auto;
 }
+
