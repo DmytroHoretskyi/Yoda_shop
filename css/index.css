@@ -63,18 +63,8 @@ input, textarea,button{
     text-shadow: 15px;
 
 }
-main #products{
-    font-family: 'Orbitron', sans-serif;
-    -webkit-text-fill-color: greenyellow;
-    font-size: 50px;
-    text-align: center;
-    background-color: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
-}
+
+
 main article .product_name{
     font-family: 'Bowlby One SC', cursive;
     text-align: center;
@@ -86,7 +76,12 @@ main article .information_about_product{
     font-size: 25px;
     margin: 15px;
 }
-main article div .buy_button{
+main article .buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+main article div .buy_button , .info_button{
  text-decoration: none;
   outline: none;
   color: white;
@@ -122,6 +117,27 @@ main article div .buy_button:hover:before{
   top: auto;
   height: 100%;
 }
+main article div .info_button:before{
+content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+
+main article div .info_button:hover{
+background: rgba(255,255,255,0);
+}
+main article div .info_button:hover:before{
+     bottom: 0%;
+  top: auto;
+  height: 100%;
+}
 #back{
     text-align: center;
     font-size: 100px;
@@ -141,14 +157,14 @@ main article div .buy_button:hover:before{
     font-size: 20px;
 }
 
-.product-list article img {
+#product-list article img {
     display: block;
     width: 100%;
 }
 article{
         border: 1px solid white;
 }
-.product-list article .buttons {
+#product-list article .buttons {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -157,7 +173,7 @@ article{
 }
 
 @media (min-width: 660px) {
-.product-list {
+#product-list {
     border-image-width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -165,7 +181,7 @@ article{
         grid-gap: 10px;}}
 
 @media (min-width: 920px) {
- .product-list {
+ #product-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -174,6 +190,115 @@ footer{
     background-repeat: no-repeat;
     background-size: 100%;
 }
+#timers_text{
+        font-family: 'Bowlby One SC', cursive;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 40px;
+    text-shadow:0px 0px 20px #040505;
+}
+footer .time_to_space{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.time_on_table,
+.time_on_table::before,
+.time_on_table::after,
+.time_on_table span,
+.time_on_table span::before,
+.time_on_table span::after
+{
+  transition: all ease .5s;
+}
+
+.time_on_table{
+  position: relative;
+  display: inline-block;
+  padding: 0.3em;
+  margin: 1em;
+  border: solid 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.time_on_table:hover
+{
+  box-shadow: 0 0 5em .5em rgba(50,50,150,0.5);
+}
+
+.time_on_table span
+{
+  display: inline-block;
+  width: 100%;
+  padding: 0.6em 2em;
+}
+
+.time_on_table:hover span
+{
+  color: #112;
+}
+
+.time_on_table::before,
+.time_on_table::after,
+.time_on_table span::before,
+.time_on_table span::after
+{
+  content: '';
+  position: absolute;
+  border: 3px;
+}
+
+.time_on_table::before,
+.time_on_table span::before
+{
+  border-style: solid none;  
+}
+
+.time_on_table::before,
+.time_on_table span::after{      
+  left: 0;
+  top: -0.4em;
+  width: 100%; 
+  height: calc(100% + 0.8em);
+}
+
+.time_on_table::after,
+.time_on_table span::after
+{
+  border-style: none solid;   
+}
+
+.time_on_table::after,
+.time_on_table span::before
+{
+  top: 0;
+  left: -0.4em;
+  height: 100%;
+  width: calc(100% + 0.8em); 
+}
+
+.time_on_table:hover::after,
+.time_on_table:hover span::after
+{
+  transform: scaleY(0);
+}
+
+.time_on_table:hover::before,
+.time_on_table:hover span::before
+{
+  transform: scaleX(0);
+}
+
+.time_on_table:hover span::after,
+.time_on_table:hover span::before
+{
+  opacity: 0;
+}
+
+
+Resources
 footer .get-ajax-html{
     
     text-align: center;
