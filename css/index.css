@@ -64,7 +64,17 @@ input, textarea,button{
 
 }
 
-
+.carousel-inner{
+  margin: 2% 25%;
+}
+.carusel_product_name{
+     font-family: 'Bowlby One SC', cursive;
+     font-size: 45px;
+}
+.carusel_product_info{
+      font-family: 'Bebas Neue', cursive;
+      font-size: 30px;
+}
 main article .product_name{
     font-family: 'Bowlby One SC', cursive;
     text-align: center;
@@ -75,6 +85,11 @@ main article .information_about_product{
     font-family: 'Bebas Neue', cursive;
     font-size: 25px;
     margin: 15px;
+}
+main article .price_of_product{
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 30px;
+    text-align: center;
 }
 main article .buttons{
     display: flex;
@@ -190,6 +205,13 @@ footer{
     background-repeat: no-repeat;
     background-size: 100%;
 }
+#message_number{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
 #timers_text{
         font-family: 'Bowlby One SC', cursive;
     text-align: center;
@@ -297,43 +319,32 @@ footer .time_to_space{
   opacity: 0;
 }
 
+.about_me {
 
-Resources
-footer .get-ajax-html{
-    
-    text-align: center;
-    text-decoration: none;
+  text-decoration: none;
   outline: none;
   display: inline-block;
-  margin: 10px 20px;
-  padding: 10px 30px;
-    position: relative;
-  border: 2px solid #f1c40f;
-  color: #f1c40f;
-  font-family: 'Montserrat', sans-serif; 
-  transition: .4s;
+  width: 140px ;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 5% 46%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: #0faf0d;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
 }
-footer .get-ajax-html:after{
- content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  border: 2px solid rgba(0,0,0,0);
-  transition: .4s;
-}
-footer .get-ajax-html:hover::after{
-    border-color: #f1c40f;
-  width: calc(100% - 10px);
-  height: calc(100% + 10px);
-}
-
-.get-ajax-html{
-    position: sticky;
+.about_me:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46,229,157,.4);
+  color: #0faf0d;
+  transform: translateY(-7px);
 }
 .info_about_admin{
     font-size: 35px;
@@ -347,4 +358,24 @@ footer .get-ajax-html:hover::after{
   display: table;
   margin: 20px auto;
 }
-
+#back{
+ text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 12px 40px;
+  margin: 150px 50px;
+  border-radius: 30px;
+  background-image: linear-gradient(45deg, #1cb50d 0%, #09691d  50%, #070d9a 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);
+  transition: .5s;
+}
+#back:hover {
+  box-shadow: 0 0 0 0 rgba(0,40,120,0);
+  background-position: 0 0;
+  }
